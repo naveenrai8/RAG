@@ -1,2 +1,3 @@
 # Retrieval-Augmented-Generation-RAG
-It contains different RAG techniques and their implementations
+
+1. [Valina RAG](./src/RAG_Vanila.py)

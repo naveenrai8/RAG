@@ -1,7 +1,6 @@
 import logging
 import os
 import sys
-from root_path import get_project_root
 
 """"
 Logger name is the input name
@@ -12,10 +11,10 @@ print_on_stdio = true if want to print the output at stdio as well.
 """
 def get_logger(logger_name: str, print_on_stdio: bool = False):
     # create if log directory doesn't exists
-    _create_if_logger_dir_not_exists(get_project_root() / 'logs')
+    _create_if_logger_dir_not_exists('logs')
 
     # create log file path
-    _log_path = os.path.join(get_project_root() / 'logs', logger_name)
+    _log_path = os.path.join('logs', logger_name)
 
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.INFO)
@@ -35,6 +34,3 @@ def get_logger(logger_name: str, print_on_stdio: bool = False):
 def _create_if_logger_dir_not_exists(path):
     if not os.path.exists(path):
         os.mkdir(path)
-
-logger = get_logger('log.log', True)
-logger.info('test again')

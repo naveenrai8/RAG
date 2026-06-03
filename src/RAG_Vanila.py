@@ -1,4 +1,4 @@
-from core.llm_providers import LLMProviders
+from core.llms import LLMProviders
 from core.pdf_readers import PdfReader, PdfReaderTypes
 from core.vector_store import FaissVectorStore, VectorStoreTypes
 from langchain_community.vectorstores import FAISS
